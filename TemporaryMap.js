@@ -86,7 +86,7 @@ class TemporaryMap extends Map {
 
             if (updateTimeout) {
               clearTimeout(item.value[1].timeout)
-              item.value[1].timeout = this[createTimerKey](item.value[0], this)
+              item.value[1].timeout = this[createTimerKey](item.value[0])
             }
 
             return {
@@ -134,7 +134,7 @@ class TemporaryMap extends Map {
 
     if (updateTimeout) {
       clearTimeout(item.timer)
-      item.timer = this[createTimerKey](key, this)
+      item.timer = this[createTimerKey](key)
     }
 
     return item.value
@@ -152,7 +152,7 @@ class TemporaryMap extends Map {
 
     super.set(key, {
       value,
-      timer: this[createTimerKey](key, this)
+      timer: this[createTimerKey](key)
     })
 
     return this
@@ -180,7 +180,7 @@ class TemporaryMap extends Map {
 
             if (updateTimeout) {
               clearTimeout(item.value[1].timeout)
-              item.value[1].timeout = this[createTimerKey](item.value[0], this)
+              item.value[1].timeout = this[createTimerKey](item.value[0])
             }
 
             return {
