@@ -1,18 +1,25 @@
 {
   "name": "temporary-map",
   "version": "1.0.0",
-  "description": "",
-  "main": "TemporaryMap.js",
-  "directories": {
-    "test": "test"
+  "keywords": ["temporary", "map", "cache"],
+  "description": "Temporary Map with auto deletion of items that have not been used for a long time.",
+  "homepage": "https://github.com/spb-web/temporary-map",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spb-web/temporary-map.git"
   },
+  "bugs": "https://github.com/spb-web/temporary-map/issues",
+  "main": "TemporaryMap.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/test.js",
     "doc": "./node_modules/jsdoc-to-markdown/bin/cli.js TemporaryMap.js > readme.md"
   },
-  "author": "V.Ruzanov <spb.web@bk.ru>",
+  "author": "V.Ruzanov <spb.web@bk.ru> (https://github.com/spb-web)",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^5.2.0"
-  }
+    "jsdoc-to-markdown": "^4.0.0",
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": "test"
 }
